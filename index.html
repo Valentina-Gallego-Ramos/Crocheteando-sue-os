@@ -152,18 +152,22 @@
 											</span>
 				</div>
 
-								<div class="layer_cart_row">
-					<strong class="dark unvisible">
-						Total envío:&nbsp;					</strong>
-					<span class="ajax_cart_shipping_cost unvisible">
-													 A determinar											</span>
-				</div>
-								<div class="layer_cart_row">
-					<strong class="dark">
-						Total
-											</strong>
-					<span class="ajax_block_cart_total">
-											</span>
-				</div>
+				
+				
+  const detallesContainer = document.querySelector('.detalles-producto');
+      detallesContainer.innerHTML = `
+        <h2>${product.title}</h2>
+        <img src="${product.image}" alt="${product.title}" style="width: 232px">
+        <p><strong>Precio:</strong> $${product.price}</p>
+        <p><strong>Descripción:</strong> ${product.description}</p>
+      `;
+    } else {
+      // Si el producto no está en localStorage, muestra un mensaje de que no se ha encontrado.
+      console.log('Producto no encontrado en el almacenamiento local.');
+    }
 
+  </script>
+</body>
+
+</html>
 				
