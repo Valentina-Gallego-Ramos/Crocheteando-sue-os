@@ -27,7 +27,7 @@ const data=[
       "price": 300,
       "description": "coloridas",
       "category": "men's clothing",
-      "image": "C:\Users\13-D002LA\Downloads\Post Instagram maquillaje natural (2).jpg",
+      "image": "Post Instagram maquillaje natural (2).jpg",
       "rating": {
           "rate": 4.7,
           "count": 500
