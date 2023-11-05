@@ -28,6 +28,75 @@
         carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
       }
     });
+
+    <div id="layer_cart">
+		<div class="clearfix">
+			<div class="layer_cart_product col-xs-12 col-md-6">
+				<span class="cross" title="Cerrar Ventana"></span>
+				<span class="title">
+					<i class="icon-check"></i>Producto añadido correctamente a su carrito de la compra
+				</span>
+				<div class="product-image-container layer_cart_img">
+				</div>
+				<div class="layer_cart_product_info">
+					<span id="layer_cart_product_title" class="product-name"></span>
+					<span id="layer_cart_product_attributes"></span>
+					<div>
+						<strong class="dark">Cantidad</strong>
+						<span id="layer_cart_product_quantity"></span>
+					</div>
+					<div>
+						<strong class="dark">Total</strong>
+						<span id="layer_cart_product_price"></span>
+					</div>
+				</div>
+			</div>
+			<div class="layer_cart_cart col-xs-12 col-md-6">
+				<span class="title">
+					<!-- Plural Case [both cases are needed because page may be updated in Javascript] -->
+					<span class="ajax_cart_product_txt_s  unvisible">
+						Hay <span class="ajax_cart_quantity">0</span> artículos en su carrito.
+					</span>
+					<!-- Singular Case [both cases are needed because page may be updated in Javascript] -->
+					<span class="ajax_cart_product_txt ">
+						Hay 1 artículo en su cesta.
+					</span>
+				</span>
+				<div class="layer_cart_row">
+					<strong class="dark">
+						Total productos:
+											</strong>
+					<span class="ajax_block_products_total">
+											</span>
+				</div>
+
+								<div class="layer_cart_row">
+					<strong class="dark unvisible">
+						Total envío:&nbsp;					</strong>
+					<span class="ajax_cart_shipping_cost unvisible">
+													 A determinar											</span>
+				</div>
+								<div class="layer_cart_row">
+					<strong class="dark">
+						Total
+											</strong>
+					<span class="ajax_block_cart_total">
+											</span>
+				</div>
+				<div class="button-container">
+					<span class="continue btn btn-default button exclusive-medium" title="Continuar comprando">
+						<span>
+							<i class="icon-chevron-left left"></i>Continuar comprando
+						</span>
+					</span>
+					<a class="btn btn-default button button-medium"	href="https://www.crochetteando.com/pedido-rapido" title="Ir al carrito" rel="nofollow">
+						<span>
+							Ir al carrito<i class="icon-chevron-right right"></i>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
   </script>
 </body>
 </html>
