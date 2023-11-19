@@ -1,31 +1,62 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es-es"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="es-es"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="es-es"><![endif]-->
-<!--[if gt IE 8]> <html class="no-js ie9" lang="es-es"><![endif]-->
-<html lang="es-es">
-	<head>
-		  <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="icon" type="image/vnd.microsoft.icon" href="https://cdn-icons-png.flaticon.com/256/1467/1467388.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/256/1467/1467388.png />
-			var CUSTOMIZE_TEXTFIELD = 1;
-			<div class="nav">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión</title>
+    <link
+      rel="stylesheet"
+     
 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login_form_container">
+      <div class="login_form">
+        <h2>Inicio de sesión</h2>
+        <div class="input_group">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            placeholder="Nombre"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="Contraseña"
+            placeholder="Contraseña"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="button_group" id="login_button">
+          <a>Entrar</a>
+        </div>
+        <div class="fotter">
+          <a>Olvidaste la contraseña?</a>
+          <a>Registrarse</a>
+        </div>
+      </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+	<script>
+		$(".input_text").focus(function(){
+    $(this).prev('.fa').addclass('glowIcon')
+})
+$(".input_text").focusout(function(){
+    $(this).prev('.fa').removeclass('glowIcon')
+})
+	</script>
 
 	
-  
-  <title>Iniciar Sesión</title>
-</head>
-
-<body>
-  <header>
-    <h1>Iniciar Sesión</h1>
-  </header>
-  <div class="Sesión">
-   
-  </div>
-   <button id="Sesión">Iniciar sesión</button>
+</html>
   
     
