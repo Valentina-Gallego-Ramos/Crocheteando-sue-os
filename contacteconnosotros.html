@@ -1,29 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactanos</title>
+    <link
+      rel="stylesheet"
+     
 
-  <!DOCTYPE HTML>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es-es"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="es-es"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="es-es"><![endif]-->
-<!--[if gt IE 8]> <html class="no-js ie9" lang="es-es"><![endif]-->
-<html lang="es-es">
-	<head>
-		  <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="icon" type="image/vnd.microsoft.icon" href="https://cdn-icons-png.flaticon.com/256/1467/1467388.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/256/1467/1467388.png />
-			var CUSTOMIZE_TEXTFIELD = 1;
-			<div class="nav">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="Contact_form_container">
+      <div class="Contact_form">
+        <h2>Dejanos tu mensaje !</h2>
+        <div class="input_group">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            placeholder="Aqui tu nombre"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="text"
+            placeholder="Escribe aqui tu mensaje"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="button_group" id="Contact_button">
+          <a>Enviar</a>
+        </div>
+        <div class="fotter">
+          <a>Comentarios</a>
+        </div>
+      </div>
+    </div>
 
-  <title>Contacte con nosotros</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 
-
-<body>
-  <header>
-    <h1>Contacte con nosotros</h1>
-  </header>
-  <div class="contacto">
-    <!-- Aquí mostrarás los detalles del producto utilizando JavaScript -->
-  </div>
-   <button id="contacto">contactenos</button>
-  <p>Llamanos al : 123456789 </p>
+	<script>
+		$(".input_text").focus(function(){
+    $(this).prev('.fa').addclass('glowIcon')
+})
+$(".input_text").focusout(function(){
+    $(this).prev('.fa').removeclass('glowIcon')
+})
+	</script>
+<style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      background-color: #f7cbf7;
+  }
+  .Contact_form_container{
+      position: relative;
+      width: 400px;
+      height: 470px;
+      max-width: 400px;
+      max-height: 470px;
+      background: #ffffcc;
+      border-radius: 50px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 70px;
+  }
+  .Contact_form_container::before{
+      
+      position: absolute;
+      width: 170%;
+      height: 170%;
+      content: '';
+      background-image: conic-gradient(transparent, transparent, transparent, #e6e6fa);
+      animation: rotate_border 6s linear infinite;
   
+  }
+  .Contact_form_container::after{
+      
+      position: absolute;
+      width: 170%;
+      height: 170%;
+      content: '';
+      background-image: conic-gradient(transparent, transparent, transparent, #87cefa);
+      animation: rotate_border 6s linear infinite;
+      animation-delay: -3s;
+  }
+  @keyframes rotate_border{
+      0%{
+          transform: rotate(0deg);
+      }
+      100%{
+          transform: rotate(360deg);
+      }
+  }
+  .Contact_form{
+      position: absolute;
+      content: '';
+      background-color: #ffffcc;
+      border-radius: 50px 5px;
+      inset: 5px;
+      padding: 50px 40px;
+      z-index: 10;
+      color: #87cefa;
+  
+  } 
+  h2{
+      font-size: 40px;
+      font-weight: 600;
+      text-align: center;
+  }
+  .input_group{
+      margin-top: 40px;
+      position:relative;
+      display:flex;
+      align-items: center;
+      justify-content: start;
+  }
+  .input_text{
+      width: 95%;
+      height: 30px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #87cefa;
+      font-size: 20px;
+      padding-left: 10px;
+      color: #87cefa;
+  
+  }
+  ::placeholder{
+      color: #87cefa;
+
+
+      letter-spacing: 1px;
+  
+  }
+  .fa{
+      font-size: 20px;
+  
+  }
+  #Contact_button{
+      position: relative;
+      width: 300px;
+      height: 40px;
+      transition: 1s;
+      margin-top: 70px;
+  
+  
+  }
+  #Contact_button a{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      z-index: 10;
+      cursor: pointer;
+      font-size: 22px;
+      letter-spacing: 2px;
+      border: 1px solid #00ccff;
+      border-radius: 50px;
+      background-color: #0c1022;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .fotter {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+  
+  }
+  .fotter a{
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 18px;
+  }
+  .glowIcon {
+      text-shadow: 0 0 10px #00ccff;
+  
+  }
+  
+</style>
+	
+</html>
+  
+    
