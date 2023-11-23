@@ -1,5 +1,14 @@
 
+<div class="boton_buscar">
+			<form>
+  <input type="text" placeholder="Buscar...">
+  <button type="submit">Buscar</button>
+</form>
+		</div>
+
+  
 <form>
+
   <input type="text" id="searchInput">
   <button type="button" onclick="search()">Buscar</button>
 </form>
