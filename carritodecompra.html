@@ -15,7 +15,7 @@
   
 
   <script>
-      document.addEventListener("DOMContentLoaded", () => {
+       document.addEventListener("DOMContentLoaded", () => {
       // Obtén el carrito desde localStorage
       const carrito = JSON.parse(localStorage.getItem("carrito"));
 
@@ -28,9 +28,11 @@
           const listItem = document.createElement("li");
           listItem.textContent = product.title;
           carritoLista.appendChild(listItem);
-	}
-
-
+        });
+      } else {
+        // Si el carrito está vacío, muestra un mensaje
+        carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
+      }
     });
   </script>
 	<style>
