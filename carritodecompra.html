@@ -15,7 +15,7 @@
   
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("DOMContentLoaded", () => {
       // Obtén el carrito desde localStorage
       const carrito = JSON.parse(localStorage.getItem("carrito"));
 
@@ -28,17 +28,12 @@
           const listItem = document.createElement("li");
           listItem.textContent = product.title;
           carritoLista.appendChild(listItem);
-
-
-
-    //función que elimina todos los elementos del carrito al accionar el botón
-    function deleteItems() {
-      localStorage.removeItem("carrito");
-      const carritoLista = document.getElementById("carritoLista");
-      carritoLista.innerHTML = "<P> !SIGUE COMPRANDO PARA VER TUS PRODUCTOS ! </P>";
-    }
-
-  
+        });
+      } else {
+        // Si el carrito está vacío, muestra un mensaje
+        carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
+      }
+    });
   </script>
 	<style>
 		 body{
