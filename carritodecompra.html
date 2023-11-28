@@ -142,6 +142,49 @@
    
       background-color: #f7cbf7;
   }
+		* Estilos para la lista del carrito */
+#carritoLista {
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+/* Estilos para los elementos de la lista del carrito */
+#carritoLista li {
+  list-style: none;
+  width: 90%;
+  border: 1px solid #c1c2ca; /* Fondo gris */
+  margin: 20px; /* Margen alrededor de cada elemento */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 15px; /* Borde redondeado */
+  overflow: hidden; /* Para asegurar que el borde redondeado se aplique correctamente */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  display: flex; /* Mostrar los elementos en línea */
+}
+
+/* Estilos para el contenedor del nombre y el precio */
+#carritoLista li div.textContainer {
+  display: flex;
+  flex-direction: column; /* Mostrar los elementos en columna */
+  border: none;
+}
+
+/* Estilos para el elemento ul dentro de textContainer */
+#carritoLista li div.textContainer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: none !important; 
+}
+
+#carritoLista li div.textContainer li {
+  margin: 5px 0; /* Ajusta el espaciado entre elementos de la lista */
+}
+
+/* Estilos para el contenedor de los botones de incremento y decremento */
+#carritoLista li div.buttonsContainer {
+  display: flex; /* Mostrar los elementos en línea */
+  align-items: center; /* Alinear verticalmente al centro */
+}
 	</style>
 </body>
 </html>
