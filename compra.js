@@ -64,7 +64,7 @@ function procesarCompra(e){
                     setTimeout(() => {
                         enviado.remove();
                         compra.vaciarLocalStorage();
-                        window.location = "productos.html";
+                        window.location = "products.html";
                     }, 2500);
 
             }, (err) => {
