@@ -24,7 +24,7 @@ function procesarCompra(e){
             timer: 2500,
             showConfirmButton: false
           }).then(function(){
-              window.location = "productos.html";
+              window.location = "products.html";
           })
     }
     else if(cliente.value === '' || correo.value === ''){
